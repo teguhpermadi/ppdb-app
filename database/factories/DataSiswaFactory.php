@@ -17,7 +17,7 @@ class DataSiswaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nama_lengkap' => fake()->name(),
         ];
     }
 }

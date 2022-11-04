@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
             JenisAgamaSeeder::class,
             AdminSeeder::class,
             UsersSeeder::class,
+            DataSiswaSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

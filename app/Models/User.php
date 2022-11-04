@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return AdminFactory::new();
     }
+
+    public function dataSiswa()
+    {
+        return $this->hasOne(DataSiswa::class);
+    }
 }

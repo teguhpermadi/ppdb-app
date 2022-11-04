@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('data_siswas', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id');
             $table->foreignUuid('user_id');
             $table->string('nama_lengkap')->nullable();
             $table->string('nama_panggilan')->nullable();
