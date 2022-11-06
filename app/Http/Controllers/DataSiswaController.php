@@ -14,7 +14,7 @@ class DataSiswaController extends Controller
      */
     public function index()
     {
-        //
+        return view('datasiswa.index');
     }
 
     /**
