@@ -32,7 +32,7 @@ class DataSiswaController extends Controller
                 return view('datasiswa.create-ayah');
                 break;
             case 'ibu':
-                # code...
+                return view('datasiswa.create-ibu');
                 break;
             case 'wali':
                 # code...

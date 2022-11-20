@@ -101,7 +101,7 @@
                                     <li>scan KTP ibu</li>
                                 </ol>
                             </p>Lengkapi data Ibu dengan klik tombol berikut <br>
-                            <a href="http://" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
+                            <a href="{{ route('datasiswa.create', ['param' => 'ibu']) }}" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
                         </div>
                     </div>
                 </div>

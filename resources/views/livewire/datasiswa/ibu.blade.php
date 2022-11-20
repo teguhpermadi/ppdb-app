@@ -14,36 +14,36 @@
         <input type="hidden" wire:model="user_id">
         <div class="card card-info">
             <div class="card-header">
-                Identitas Ayah
+                Identitas Ibu
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="">Status Ayah</label>
-                    <select wire:model="status_ayah" class="form-control">
+                    <label for="">Status ibu</label>
+                    <select wire:model="status_ibu" class="form-control">
                         {{-- <option>Pilih status</option> --}}
                         <option value="masih hidup">Masih hidup</option>
                         <option value="sudah meninggal">Sudah meninggal</option>
                     </select>
                 </div>
-                <x-adminlte-input wire:model="nik_ayah" name="nik_ayah" label="{{ Str::headline('nik_ayah') }}" enable-old-support />
-                <x-adminlte-input wire:model="nama_ayah" name="nama_ayah" label="{{ Str::headline('nama_ayah') }}" enable-old-support />
-                <x-adminlte-select wire:model="agama_ayah" name="agama_ayah" label="{{ Str::headline('agama_ayah') }}">
+                <x-adminlte-input wire:model="nik_ibu" name="nik_ibu" label="{{ Str::headline('nik_ibu') }}" enable-old-support />
+                <x-adminlte-input wire:model="nama_ibu" name="nama_ibu" label="{{ Str::headline('nama_ibu') }}" enable-old-support />
+                <x-adminlte-select wire:model="agama_ibu" name="agama_ibu" label="{{ Str::headline('agama_ibu') }}">
                     <x-adminlte-options :options="$opt_agama"  empty-option="Pilih agama"/>
                 </x-adminlte-select>
                 
-                <x-adminlte-select wire:model="pendidikan_ayah" name="pendidikan_ayah" label="{{ Str::headline('pendidikan_ayah') }}">
+                <x-adminlte-select wire:model="pendidikan_ibu" name="pendidikan_ibu" label="{{ Str::headline('pendidikan_ibu') }}">
                     <x-adminlte-options :options="$opt_pendidikan"  empty-option="Pilih agama"/>
                 </x-adminlte-select>
                 
-                <x-adminlte-select wire:model="pekerjaan_ayah" name="pekerjaan_ayah" label="{{ Str::headline('pekerjaan_ayah') }}">
+                <x-adminlte-select wire:model="pekerjaan_ibu" name="pekerjaan_ibu" label="{{ Str::headline('pekerjaan_ibu') }}">
                     <x-adminlte-options :options="$opt_pekerjaan"  empty-option="Pilih agama"/>
                 </x-adminlte-select>
                 
-                <x-adminlte-select wire:model="penghasilan_ayah" name="penghasilan_ayah" label="{{ Str::headline('penghasilan_ayah') }}">
+                <x-adminlte-select wire:model="penghasilan_ibu" name="penghasilan_ibu" label="{{ Str::headline('penghasilan_ibu') }}">
                     <x-adminlte-options :options="$opt_penghasilan"  empty-option="Pilih agama"/>
                 </x-adminlte-select>
                 
-                <x-adminlte-input wire:model="telp_ayah" name="telp_ayah" label="{{ Str::headline('telp_ayah') }}" enable-old-support />
+                <x-adminlte-input wire:model="telp_ibu" name="telp_ibu" label="{{ Str::headline('telp_ibu') }}" enable-old-support />
 
             </div>
         </div>
