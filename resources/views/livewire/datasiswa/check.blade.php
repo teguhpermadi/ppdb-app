@@ -1,111 +1,159 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
-    <div class="uk-container uk-padding">
-        <div class="uk-timeline">
-            <div class="uk-timeline-item">
-                <div class="uk-timeline-icon">
+     <!-- Timelime example  -->
+     <div class="row">
+        <div class="col-md-12">
+          <!-- The time line -->
+          <div class="timeline">
+            <!-- timeline time label -->
+            <div class="time-label">
+              <span class="bg-warning p-3">Isi Formulir Pendaftaran</span>
+            </div>
+            <!-- /.timeline-label -->
+            <!-- timeline item -->
+            <div>
+                @if ($dataSiswa)
+                    <i class="fas fa-check bg-blue"></i>
+                @else
+                    <i class="fas fa-times bg-red"></i>
+                @endif
+              <div class="timeline-item">
+                {{-- <span class="time"><i class="fas fa-clock"></i> 12:05</span> --}}
+                <h3 class="timeline-header">Data Calon Siswa
                     @if ($dataSiswa)
-                        <span class="uk-badge"><span uk-icon="check"></span></span>
+                        <span class="float-right badge badge-primary">Sudah Lengkap</span>
                     @else
-                        <span class="uk-badge" style="background-color: red"><span uk-icon="close"></span></span>
+                        <span class="float-right badge badge-warning">Belum Lengkap</span>
                     @endif
+                </h3>
+                <div class="timeline-body">
+                        Data siswa yang harus diisi meliputi:
+                        <ol>
+                            <li>nama lengkap calon siswa</li>
+                            <li>nama panggilan</li>
+                            <li>tempat lahir</li>
+                            <li>tanggal lahir</li>
+                            <li>alamat</li>
+                            <li>nomor induk kependudukan</li>
+                            <li>nomor kartu keluarga</li>
+                            <li>nomor induk siswa nasional</li>
+                            <li>scan akta lahir</li>
+                            <li>scan kartu keluarga</li>
+                        </ol>
                 </div>
-                <div class="uk-timeline-content">
-                    <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-                        <div class="uk-card-header">
-                            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                <h3 class="uk-card-title">Data Siswa</h3>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <p>
-                                Data siswa yang harus diisi meliputi:
-                                <ol>
-                                    <li>nama lengkap calon siswa</li>
-                                    <li>nama panggilan</li>
-                                    <li>tempat lahir</li>
-                                    <li>tanggal lahir</li>
-                                    <li>alamat</li>
-                                    <li>nomor induk kependudukan</li>
-                                    <li>nomor kartu keluarga</li>
-                                    <li>nomor induk siswa nasional</li>
-                                    <li>scan akta lahir</li>
-                                    <li>scan kartu keluarga</li>
-                                </ol>
-                                Lengkapi data siswa dengan klik tombol berikut <br>
-                                <a href="{{ route('datasiswa.create', ['param' => 'siswa']) }}" class="btn btn-primary btn-sm mt-3">Data Siswa</a>
-                            </p>
-                        </div>
-                    </div>
+                <div class="timeline-footer">
+                    <a href="{{ route('datasiswa.create', ['param' => 'siswa']) }}" class="btn btn-primary btn-sm mt-3">Data Siswa</a>
                 </div>
+              </div>
             </div>
-            <div class="uk-timeline-item">
-                <div class="uk-timeline-icon">
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <div>
+                @if ($dataAyah)
+                    <i class="fas fa-check bg-blue"></i>
+                @else
+                    <i class="fas fa-times bg-red"></i>
+                @endif
+              <div class="timeline-item">
+                {{-- <span class="time"><i class="fas fa-clock"></i> 5 mins ago</span> --}}
+                <h3 class="timeline-header">Data Identitas Ayah
                     @if ($dataAyah)
-                        <span class="uk-badge"><span uk-icon="check"></span></span>
+                        <span class="float-right badge badge-primary">Sudah Lengkap</span>
                     @else
-                        <span class="uk-badge" style="background-color: red"><span uk-icon="close"></span></span>
+                        <span class="float-right badge badge-warning">Belum Lengkap</span>
                     @endif
-                </div>
-                <div class="uk-timeline-content">
-                    <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-                        <div class="uk-card-header">
-                            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                <h3 class="uk-card-title">Data Ayah</h3>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <p>
-                                Data ayah yang harus diisi meliputi:
-                                <ol>
-                                    <li>nama lengkap ayah</li>
-                                    <li>agama ayah</li>
-                                    <li>pekerjaan ayah</li>
-                                    <li>penghasilan ayah</li>
-                                    <li>status ayah</li>
-                                    <li>nomor induk kependudukan</li>
-                                    <li>scan KTP ayah</li>
-                                </ol>
-                                Lengkapi data ayah dengan klik tombol berikut <br>
-                                <a href="{{ route('datasiswa.create', ['param' => 'ayah']) }}" class="btn btn-primary btn-sm mt-3">Data Ayah</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </h3>
+                <div class="timeline-body">
+                    Data ayah yang harus diisi meliputi:
+                    <ol>
+                        <li>nama lengkap ayah</li>
+                        <li>agama ayah</li>
+                        <li>pekerjaan ayah</li>
+                        <li>penghasilan ayah</li>
+                        <li>status ayah</li>
+                        <li>nomor induk kependudukan</li>
+                        <li>scan KTP ayah</li>
+                    </ol>
             </div>
-                    <div class="uk-timeline-item">
-                <div class="uk-timeline-icon">
+            <div class="timeline-footer">
+                <a href="{{ route('datasiswa.create', ['param' => 'ayah']) }}" class="btn btn-primary btn-sm mt-3">Data Ayah</a>
+            </div>
+              </div>
+            </div>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <div>
+                @if ($dataIbu)
+                    <i class="fas fa-check bg-blue"></i>
+                @else
+                    <i class="fas fa-times bg-red"></i>
+                @endif
+              <div class="timeline-item">
+                {{-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> --}}
+                <h3 class="timeline-header">Data Identitas Ibu
                     @if ($dataIbu)
-                        <span class="uk-badge"><span uk-icon="check"></span></span>
+                        <span class="float-right badge badge-primary">Sudah Lengkap</span>
                     @else
-                        <span class="uk-badge" style="background-color: red"><span uk-icon="close"></span></span>
+                        <span class="float-right badge badge-warning">Belum Lengkap</span>
                     @endif
+                </h3>
+                <div class="timeline-body">
+                    Data ibu yang harus diisi meliputi:
+                    <ol>
+                        <li>nama lengkap ibu</li>
+                        <li>agama ibu</li>
+                        <li>pekerjaan ibu</li>
+                        <li>penghasilan ibu</li>
+                        <li>status ibu</li>
+                        <li>nomor induk kependudukan</li>
+                        <li>scan KTP ibu</li>
+                    </ol>
                 </div>
-                <div class="uk-timeline-content">
-                    <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
-                        <div class="uk-card-header">
-                            <div class="uk-grid-small uk-flex-middle" uk-grid>
-                                <h3 class="uk-card-title">Data Ibu</h3>
-                            </div>
-                        </div>
-                        <div class="uk-card-body">
-                            <p>
-                                Data ibu yang harus diisi meliputi:
-                                <ol>
-                                    <li>nama lengkap ibu</li>
-                                    <li>agama ibu</li>
-                                    <li>pekerjaan ibu</li>
-                                    <li>penghasilan ibu</li>
-                                    <li>status ibu</li>
-                                    <li>nomor induk kependudukan</li>
-                                    <li>scan KTP ibu</li>
-                                </ol>
-                            </p>Lengkapi data Ibu dengan klik tombol berikut <br>
-                            <a href="{{ route('datasiswa.create', ['param' => 'ibu']) }}" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
-                        </div>
-                    </div>
+                <div class="timeline-footer">
+                    <a href="{{ route('datasiswa.create', ['param' => 'ibu']) }}" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
                 </div>
+              </div>
             </div>
+            <!-- END timeline item -->
+            <!-- timeline item -->
+            <div>
+                @if ($dataWali)
+                    <i class="fas fa-check bg-blue"></i>
+                @else
+                    <i class="fas fa-times bg-warning"></i>
+                @endif
+              <div class="timeline-item">
+                {{-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> --}}
+                <h3 class="timeline-header">Data Identitas Wali
+                    @if ($dataWali)
+                        <span class="float-right badge badge-primary">Sudah Lengkap</span>
+                    @else
+                        <span class="float-right badge badge-warning">Tidak Wajib</span>
+                    @endif
+                </h3>
+                <div class="timeline-body">
+                    Data wali yang harus diisi meliputi:
+                    <ol>
+                        <li>hubungan wali</li>
+                        <li>nama lengkap wali</li>
+                        <li>agama wali</li>
+                        <li>pekerjaan wali</li>
+                        <li>penghasilan wali</li>
+                        <li>nomor induk kependudukan</li>
+                        <li>scan KTP wali</li>
+                    </ol>
+                </div>
+                <div class="timeline-footer">
+                    <a href="{{ route('datasiswa.create', ['param' => 'wali']) }}" class="btn btn-primary btn-sm mt-3">Data Wali</a>
+                </div>
+              </div>
+            </div>
+            <!-- END timeline item -->
+            <!-- timeline time label -->
+            <div class="time-label">
+              <span class="bg-warning p-3">Verifikasi Data</span>
+            </div>
+          </div>
         </div>
-    </div>
+        <!-- /.col -->
+      </div>
 </div>

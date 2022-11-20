@@ -13,12 +13,9 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/uk-timeline.css">
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/css/uikit.min.css'><link rel="stylesheet" href="./style.css">
+    
 @stop
 
 @section('js')
-    {{-- <script> console.log('Hi!'); </script> --}}
-    <script src='https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/uikit@3.4.2/dist/js/uikit-icons.min.js'></script>
+
 @stop
