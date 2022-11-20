@@ -22,9 +22,24 @@ class DataSiswaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($param)
     {
-        //
+        switch ($param) {
+            case 'siswa':
+                return view('datasiswa.create-siswa');
+                break;
+            case 'ayah':
+                return view('datasiswa.create-ayah');
+                break;
+            case 'ibu':
+                # code...
+                break;
+            case 'wali':
+                # code...
+                break;
+            
+            
+        }
     }
 
     /**

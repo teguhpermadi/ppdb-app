@@ -28,4 +28,12 @@ Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
 
-Route::resource('datasiswa', DataSiswaController::class);
+// Route::middleware('auth')->group(function(){
+//     Route::get('/datasiswa/create/{param?}', [DataSiswaController::class, 'create'])->name('datasiswa.create');
+//     Route::resource('datasiswa', DataSiswaController::class);
+// });
+
+Route::controller(DataSiswaController::class)->middleware('auth')->group(function() {
+    Route::get('formulir/', 'index')->name('datasiswa.index');
+    Route::get('formulir/create/{param?}', 'create')->name('datasiswa.create');
+});
