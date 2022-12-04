@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('nik')->nullable();
             $table->string('nkk')->nullable();
             $table->string('nisn')->nullable();
-            $table->enum('status_ayah', ['masih hidup', 'meninggal dunia'])->nullable();
+            $table->string('status_ayah')->nullable();
             $table->string('nik_ayah')->nullable();
             $table->string('nama_ayah')->nullable();
             $table->string('agama_ayah')->nullable();
@@ -36,7 +36,7 @@ return new class extends Migration
             $table->string('pekerjaan_ayah')->nullable();
             $table->string('penghasilan_ayah')->nullable();
             $table->string('telp_ayah')->nullable();
-            $table->enum('status_ibu', ['masih hidup', 'meninggal dunia'])->nullable();
+            $table->string('status_ibu')->nullable();
             $table->string('nik_ibu')->nullable();
             $table->string('nama_ibu')->nullable();
             $table->string('agama_ibu')->nullable();
@@ -52,6 +52,13 @@ return new class extends Migration
             $table->string('pekerjaan_wali')->nullable();
             $table->string('penghasilan_wali')->nullable();
             $table->string('telp_wali')->nullable();
+            $table->string('scan_akta')->nullable();
+            $table->string('scan_surat')->nullable();
+            $table->string('scan_ijazah')->nullable();
+            $table->string('scan_kartu_keluarga')->nullable();
+            $table->string('scan_ktp_ayah')->nullable();
+            $table->string('scan_ktp_ibu')->nullable();
+            $table->string('scan_ktp_wali')->nullable();
             $table->timestamps();
         });
     }

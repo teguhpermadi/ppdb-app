@@ -41,7 +41,7 @@
                         </ol>
                 </div>
                 <div class="timeline-footer">
-                    <a href="{{ route('datasiswa.create', ['param' => 'siswa']) }}" class="btn btn-primary btn-sm mt-3">Data Siswa</a>
+                    <a href="{{ route('datasiswa.siswaCreate') }}" class="btn btn-primary btn-sm mt-3">Data Siswa</a>
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@
                     </ol>
             </div>
             <div class="timeline-footer">
-                <a href="{{ route('datasiswa.create', ['param' => 'ayah']) }}" class="btn btn-primary btn-sm mt-3">Data Ayah</a>
+                <a href="{{ route('datasiswa.ayahCreate') }}" class="btn btn-primary btn-sm mt-3">Data Ayah</a>
             </div>
               </div>
             </div>
@@ -109,7 +109,7 @@
                     </ol>
                 </div>
                 <div class="timeline-footer">
-                    <a href="{{ route('datasiswa.create', ['param' => 'ibu']) }}" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
+                    <a href="{{ route('datasiswa.ibuCreate') }}" class="btn btn-primary btn-sm mt-3">Data Ibu</a>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
                 @if ($dataWali)
                     <i class="fas fa-check bg-blue"></i>
                 @else
-                    <i class="fas fa-times bg-warning"></i>
+                    <i class="fas fa-times bg-red"></i>
                 @endif
               <div class="timeline-item">
                 {{-- <span class="time"><i class="fas fa-clock"></i> 27 mins ago</span> --}}
@@ -143,7 +143,7 @@
                     </ol>
                 </div>
                 <div class="timeline-footer">
-                    <a href="{{ route('datasiswa.create', ['param' => 'wali']) }}" class="btn btn-primary btn-sm mt-3">Data Wali</a>
+                    <a href="{{ route('datasiswa.waliCreate') }}" class="btn btn-primary btn-sm mt-3">Data Wali</a>
                 </div>
               </div>
             </div>

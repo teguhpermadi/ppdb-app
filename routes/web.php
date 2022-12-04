@@ -35,5 +35,16 @@ Route::get('/home', function() {
 
 Route::controller(DataSiswaController::class)->middleware('auth')->group(function() {
     Route::get('formulir/', 'index')->name('datasiswa.index');
-    Route::get('formulir/create/{param?}', 'create')->name('datasiswa.create');
+
+    Route::get('formulir/siswa/create', 'siswaCreate')->name('datasiswa.siswaCreate');
+    Route::post('formulir/siswa/store', 'siswaStore')->name('datasiswa.siswaStore');
+    
+    Route::get('formulir/ayah/create', 'ayahCreate')->name('datasiswa.ayahCreate');
+    Route::post('formulir/ayah/store', 'ayahStore')->name('datasiswa.ayahStore');
+
+    Route::get('formulir/ibu/create', 'ibuCreate')->name('datasiswa.ibuCreate');
+    Route::post('formulir/ibu/store', 'ibuStore')->name('datasiswa.ibuStore');
+    
+    Route::get('formulir/wali/create', 'waliCreate')->name('datasiswa.waliCreate');
+    Route::post('formulir/wali/store', 'waliStore')->name('datasiswa.waliStore');
 });

@@ -32,6 +32,11 @@ class Check extends Component
         {
             $this->dataIbu = true;
         }
+        
+        if(Arr::has($data, ['hubungan_wali', 'nik_wali', 'nama_wali', 'agama_wali', 'pekerjaan_wali', 'penghasilan_wali', 'telp_wali']))
+        {
+            $this->dataWali = true;
+        }
     }
 
     public function render()
